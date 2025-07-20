@@ -47,7 +47,7 @@ enfin,
 
 ici la syntax est du SQL natif, votre creation de table peux donc ressembler a quelques choses comme cela :  
 
-`CREATE TABLE users` 
+`CREATE TABLE users`  
 `(id BIGSERIAL PRIMARY KEY NOT NULL,`  
 `name VARCHAR(200) NOT NULL,`  
 `email VARCHAR(200) NOT NULL,`  
@@ -92,5 +92,5 @@ Pour installer une bibliothèque, aller à la racine de votre projet dans le ter
 `npm i 'nom de la bibliothèque'`  
 
 --------
-Merci d'avoir lu ce readme, en espérant que le projet vous sera utile !
+Merci d'avoir lu ce readme, en espérant que le projet vous sera utile !  
 Valentin.
