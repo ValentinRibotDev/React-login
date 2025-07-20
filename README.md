@@ -48,10 +48,10 @@ enfin,
 ici la syntax est du SQL natif, votre creation de table peux donc ressembler a quelques choses comme cela :  
 
 `CREATE TABLE users` 
-`(id BIGSERIAL PRIMARY KEY NOT NULL,`
-`name VARCHAR(200) NOT NULL,`
-`email VARCHAR(200) NOT NULL,`
-`password VARCHAR(200) NOT NULL,`
+`(id BIGSERIAL PRIMARY KEY NOT NULL,`  
+`name VARCHAR(200) NOT NULL,`  
+`email VARCHAR(200) NOT NULL,`  
+`password VARCHAR(200) NOT NULL,`  
 `UNIQUE (email));`  
 
 --------
@@ -60,16 +60,16 @@ ici la syntax est du SQL natif, votre creation de table peux donc ressembler a q
 Maintenant que notre BDD est opérationnel, il nous faut creer le .env avec les données que vous avez renseignez lors de la creation de la BDD.  
 ( Attention, le .env n'est pas sécurisé car votre mot de passe et nom utilisateur sont accessible, je n'ai pas encore appris à rendre cela sécuriser malheureusement :/, ne mettez pas le dossier .env en ligne !)  
 
-`DB_USER='nom utilsateur psql'`
-`DB_PASSWORD='mot de passe psql'`
-`DB_HOST=localhost`
-`DB_PORT=5432`
-`DB_DATABASE='nom BDD psql'`
+`DB_USER='nom utilsateur psql'`  
+`DB_PASSWORD='mot de passe psql'`  
+`DB_HOST=localhost`  
+`DB_PORT=5432`  
+`DB_DATABASE='nom BDD psql'`  
 
-A partir de là, le code devrait fonctionner en localhost sur le port 4000 que j'ai setup, si vous souhaitez utiliser un autre port vous pouvez le modifier dans le fichier server.js ligne 14 :
+A partir de là, le code devrait fonctionner en localhost sur le port 4000 que j'ai setup, si vous souhaitez utiliser un autre port vous pouvez le modifier dans le fichier server.js ligne 14 :  
 
-`//variable pour le port utilisé`
-`const port = process.env.PORT || 4000;` <- modifier ici
+`//variable pour le port utilisé`  
+`const port = process.env.PORT || 4000;` <- modifier ici  
 
 --------
 ## Information complémentaire
@@ -86,3 +86,11 @@ Pour réaliser ce projet j'ai installer beaucoup de bibliothèque différentes, 
 8. "passport-local" (strategy de passport pour l'authentifaction selon une base de donnée spécifié)
 9. "pg" (permet la connexion avec la BDD psql)
 10. "nodemon" (permet le refresh automatique de notre page web lors d'un changement de code coté dev)
+
+Pour installer une bibliothèque, aller à la racine de votre projet dans le terminal puis taper :
+
+`npm i 'nom de la bibliothèque'`  
+
+--------
+Merci d'avoir lu ce readme, en espérant que le projet vous sera utile !
+Valentin.
