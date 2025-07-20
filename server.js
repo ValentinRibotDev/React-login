@@ -112,11 +112,12 @@ app.post('/users/register', async (req,res)=>{
   }
 });
 
-app.post("/users/login", passport.authenticate('local', {
-  successRedirect: '/users/dashboard',
-  failureRedirect: "/users/login",
-  failureFlash: true
-}))
+app.post("/users/login", passport.authenticate('local-custom', {
+    successRedirect: '/users/dashboard',
+    failureRedirect: '/users/login',
+    failureFlash: true
+  })
+);
 
 //log dans le terminal si la connexion a réussi
 app.listen(port, ()=>{
