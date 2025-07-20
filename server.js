@@ -25,6 +25,9 @@ app.use(session({
   saveUninitialized: false, //met dans la session meme si aucune information n'a été enregistrer dans le paramètre (désactivé en false)
 }));
 
+//Setup du dossier public 
+app.use(express.static('public'));
+
 //Setup de passport
 app.use(passport.initialize());
 app.use(passport.session());

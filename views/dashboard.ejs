@@ -3,14 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/global.css">
   <title>Dashboard</title>
 </head>
 <body>
+  <h1>hello <%= name %></h1>
+
+  <div class="infoForm">    
+    <p>Your email is <%= email %></p>
+
+    <p>Your ID is <%= id %></p>
+  </div>
 
   <a href="/users/logout">Logout</a>
-  <h1>hello <%= name %></h1>
-  <p>Your email is <%= email %></p>
-  <p>Your ID is <%= id %></p>
-
+  
 </body>
 </html>

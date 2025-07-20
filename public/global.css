@@ -1,0 +1,187 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+body{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #222;
+  color:white;
+}
+
+h1 {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  letter-spacing: 0.2em;
+}
+
+.loginForm, .registerForm, .infoForm {
+  width: 400px;
+  border:1px solid white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.loginForm {
+    height:300px;
+}
+
+.registerForm {
+    height:350px;
+}
+
+p{
+  width:100%;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  margin: 5px 0px;
+} 
+
+.inputForm {
+  width:100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  margin: 5px 0px;
+}
+
+input {
+  width:80%;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+/*Apparence global des liens hypertext*/
+a {
+  margin-top: 5px;
+  text-decoration: none;
+  color:white;
+  transition: 0.5s;
+}
+
+a:visited {
+  color: grey;
+}
+
+a:hover {
+  letter-spacing: 0.1em;
+  color:white;
+}
+
+/*Apparence global des boutons*/
+/*Apparence de base du bouton */
+.modern-btn {
+    position:relative;
+    padding:14px 36px;
+    margin: 10px;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #fff;
+    background: #1c2526;
+    border:none;
+    border-radius: 12px;
+    cursor:pointer;
+    overflow: hidden;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+/*Apparence de base du contour du bouton */
+.modern-btn::before {
+    content:'';
+    position:absolute;
+    inset: -2px;
+    background: linear-gradient(45deg, var(--clr1), var(--clr2));
+    border-radius: 14px;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.modern-btn::after {
+    content:'';
+    position:absolute;
+    inset: 2px;
+    background: #1c2526;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+/* Animation du bouton lors du hover */
+.modern-btn:hover {
+    transform: translateY(-2px);
+    color: var(--clr2);
+}
+
+/* Animation du contour lors du hover */
+.modern-btn:hover::before {
+    background: linear-gradient(45deg, var(--clr2), var(--clr1));
+    filter : blur(1px);       
+}
+
+/* Animation du bouton lors du clic */
+.modern-btn:active {
+    transform: scale(0.95);
+}
+
+/*Apparence de base de l'effet brillance */
+.modern-btn-shine {
+    position:absolute;
+    top:-50%;
+    left:-50%;
+    width:200%;
+    height: 200%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease;
+    z-index:0;
+}
+
+.modern-btn:hover .modern-btn-shine {
+    transform: translateX(100%);
+}
+
+/* Apparence global des ul */
+
+ul{
+  list-style-type: none;
+  margin-top:10px;
+  padding:0;
+  width: 400px;
+  height:30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color:rgb(211, 59, 59);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+ul:has(li.error) {
+  background: rgba(211, 59, 59, 0.2); 
+}
+
+li.error {
+  color: rgb(211, 59, 59); 
+}
+
+ul:has(li.success) {
+  background: rgba(59, 211, 109, 0.2); 
+}
+
+li.success {
+  color: rgb(59, 211, 109); 
+}
