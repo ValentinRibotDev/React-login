@@ -18,7 +18,7 @@ Commencer par installer PostgreSQL si ce n'est pas déja fait puis ouvrer votre 
 
 2. On va maintenant creer notre propre compte utilisateur, pour cela ecrivez : 
 
-`CREATE USERS 'votre nom' WITH PASSWORD 'votre pwd' CREATEDB;`  
+`CREATE USER 'votre nom' WITH PASSWORD 'votre pwd' CREATEDB;`  
 (le CREATEDB donne les autorisations à cette utilisateur de créer une base de donnée)
 
 3. Maintenant que votre compte est créé, on va se déconnecter pour pouvoir se reconnecter sur ce nouveau compte :
