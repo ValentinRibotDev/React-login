@@ -71,6 +71,12 @@ A partir de là, le code devrait fonctionner en localhost sur le port 4000 que j
 `//variable pour le port utilisé`  
 `const port = process.env.PORT || 4000;` <- modifier ici  
 
+Il ne vous reste plus qu'à taper à la racine de votre dossier dans le terminal :  
+
+`npm run start`  
+ou  
+`npm run dev`  
+
 --------
 ## Information complémentaire
 
